@@ -1,100 +1,176 @@
 # 12433773_fruit-classification-cnn
-Applied Deep Learning
-# Image Classification of Fruits Using Convolutional Neural Networks (CNNs)
+
+## Applied Deep Learning
+
+### Image Classification of Fruits Using Convolutional Neural Networks (CNNs)
 
 **Course:** Applied Deep Learning (2025)  
-**Student Name:** Mian Azan Farooq 
+**Student Name:** Mian Azan Farooq  
 **Matriculation Number:** 12433773  
 
+---
 
+### 1. Project Overview
 
+The goal of this project is to build an end-to-end deep learning pipeline for image classification using a convolutional neural network. The system classifies fruit images into their respective categories based on the Fruits360 dataset.
 
-## 1. Introduction
+The project includes:
 
-The goal of this project is to build a simple and effective deep learning model that can recognize different types of fruits from images.  
-I chose this topic because it’s straightforward, visual, and helps me understand the basics of image classification using Convolutional Neural Networks (CNNs).  
-Fruit images are easy to collect and work with, and the dataset I’m using is already well-prepared for experiments.
+- A complete training pipeline
+- A validation and testing setup
+- A Streamlit-based inference application
+- Confidence-based Out-of-Distribution (OOD) detection
 
-This project will serve as my starting point for understanding how neural networks learn visual features such as color, texture, and shape.
+This implementation serves as a baseline model, which was iteratively improved and debugged during development.
 
+---
 
+### 2. Dataset
 
+**Dataset:** Fruits360 Dataset
 
-## 2. Related Work (References)
+**Source:**(https://www.kaggle.com/moltean/fruits)
 
-1. Mureșan, H., & Oltean, M. (2018). *Fruit recognition from images using deep learning.* Acta Universitatis Sapientiae, Informatica, 10(1), 26–42. [https://arxiv.org/abs/1712.00580]
+- **Training/** – used for training and validation (80/20 split)
+- **Test/** – used for evaluation
 
-2. Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). *ImageNet classification with deep convolutional neural networks.* Communications of the ACM, 60(6), 84–90. [https://doi.org/10.1145/3065386]
+**Image Size:** 224 × 224
 
-These two papers helped me understand how convolutional layers work for image recognition and inspired me to apply similar principles on a smaller dataset.
+**Color Mode:** RGB (3 channels)
 
+All images are rescaled to [0, 1] during preprocessing.
 
+---
 
-## 3. Dataset Description
+### 3. Error Metric
 
-**Dataset:** Fruits 360 Dataset  
-**Source:**(https://www.kaggle.com/moltean/fruits)  
-**Size:** Over 70,000 labeled fruit and vegetable images  
-**Image format:** 100x100 RGB images  
-**Number of classes:** More than 100 fruit categories  
+- **Primary Metric:** Categorical Accuracy
+- **Loss Function:** Categorical Crossentropy
 
-The dataset is already divided into training and testing sets.  
-Each fruit type is captured from multiple angles under controlled lighting conditions, making it suitable for image classification tasks.
+**Target Metric:**
 
+- Target accuracy: ≥ 90% validation accuracy
 
+**Achieved Results:**
 
-## 4. Approach
+- Training and validation accuracy exceeded the target for most fruit classes
+- High-confidence predictions for in-distribution samples (e.g., apples)
+- Lower confidence for ambiguous or out-of-distribution inputs
 
-1. **Data Preparation**  
-   - Download and explore the Fruits 360 dataset.  
-   - Resize and normalize images.  
-   - Apply data augmentation (flipping, rotation, brightness adjustment).
+---
 
-2. **Model Design**  
-   - Build a CNN with 3 convolutional layers followed by dense layers.  
-   - Use ReLU activation, MaxPooling, and Dropout to prevent overfitting.
+### 4. Model Architecture
 
-3. **Training and Fine-tuning**  
-   - Train the model for around 20 epochs.  
-   - Experiment with optimizers (Adam, RMSprop) and learning rates.  
-   - Evaluate accuracy and confusion matrix.
+**Base model:** EfficientNetB0
 
-4. **Application Development**  
-   - Create a small Streamlit web app that allows users to upload a fruit image.  
-   - Display the predicted fruit type and confidence level.
+**Weights:** Trained from scratch (weights=None)
 
+**Reason:** Avoid shape mismatch and ensure full control over input pipeline
 
+**Architecture:**
 
+- EfficientNetB0 (feature extractor)
+- Global Average Pooling
+- Dense Softmax classification layer
 
+---
 
-## 5. Tools and Libraries
+### 5. Training Pipeline
 
-- Python 3.10  
-- TensorFlow / Keras  
-- NumPy and Matplotlib  
-- Streamlit (for simple demo app)  
-- Google Colab (for training)
+Implemented using **ImageDataGenerator**
 
+- **Validation Split:** 20%
+- **Optimizer:** Adam (learning rate = 1e-4)
+- **Epochs:** 10
 
+The training pipeline is fully automated and reproducible.
 
-## 6. Expected Outcome
+---
 
-By the end of this project, I aim to achieve:
-- A trained CNN model with around **90% accuracy** on the test data.  
-- A small web app for fruit classification.  
-- A better understanding of CNNs and data preprocessing.  
+### 6. Inference & Streamlit Application
 
-If time allows, I might compare the CNN results with a simple traditional image classifier (like SVM or k-NN) to see how much improvement deep learning provides.
+A **Streamlit** web application allows users to upload an image and receive predictions.
 
+**Inference Steps:**
 
+1. Image upload
+2. Resize to 224 × 224
+3. Normalize pixel values
+4. Model prediction
+5. Confidence-based decision
 
-## 7. Repository and Access
+---
 
-This repository contains my project files .  
-It will be updated throughout the semester as the project progresses.
+### 7. Out-of-Distribution (OOD) Detection
 
-**Repository Link:(https://github.com/Mian1930/12433773_fruit-classification-cnn)
+To prevent unreliable predictions, an OOD threshold is used:
 
+**OOD_THRESHOLD = 0.60**
 
+Predictions below 60% confidence are flagged as Unknown object (Out-of-Distribution). This prevents overconfident predictions on unrelated images.
 
+**Example:**
 
+- Apple image: 99.61% → accepted
+- Non-fruit image (card): 48.36% → low confidence (expected behavior)
+
+This demonstrates proper uncertainty handling.
+
+---
+
+### 8. Testing
+
+- Data loading and preprocessing were manually validated
+- End-to-end inference tested using both in-distribution and out-of-distribution images
+- Training correctness verified through successful convergence
+- Formal unit tests were not implemented due to time constraints, but the pipeline was thoroughly validated during execution.
+
+---
+
+### 9. Software Engineering Practices
+
+- Clear and descriptive variable and function names
+- Modular code structure (`train_efficientnet.py`, `data_loader_fruits360.py`, `app_streamlit.py`)
+- Comments included where design decisions are non-obvious
+- Python version and dependencies documented
+
+---
+
+### 10. Time Breakdown (Approximate)
+
+| Task                              | Time Spent |
+|-----------------------------------|------------|
+| Dataset setup & exploration       | 3.5 h      |
+| Baseline model implementation     | 5 h        |
+| Debugging & pipeline fixes       | 5 h        |
+| Streamlit app development         | 4 h        |
+| Evaluation & testing              | 4.5 h      |
+| Documentation                     | 1 h        |
+
+---
+
+### 11. How to Run
+
+**Training:**
+
+```bash
+python train_efficientnet.py
+```
+
+**Streamlit App:**
+
+```bash
+streamlit run app_streamlit.py
+```
+
+---
+
+### 12. Conclusion
+
+All requirements of Assignment 2 have been fulfilled:
+
+- Working end-to-end pipeline
+- Defined error metric and target
+- Achieved and evaluated results
+- OOD detection implemented
+- Proper software engineering practices followed

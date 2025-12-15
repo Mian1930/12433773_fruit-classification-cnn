@@ -1,0 +1,30 @@
+# =========================
+# Model outputs
+# =========================
+src/outputs/
+src/outputs_test/
+src/outputs_efficientnet/
+src/outputs_mobilenetv2_A/
+src/outputs_mobilenetv2_B/
+
+*.h5
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+venv/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# IDE / Jupyter
+# =========================
+.ipynb_checkpoints/
+.vscode/
+.idea/

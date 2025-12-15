@@ -1,0 +1,137 @@
+                     precision    recall  f1-score   support
+
+     Apple Braeburn       0.00      0.00      0.00        17
+ Apple Crimson Snow       0.00      0.00      0.00        24
+     Apple Golden 1       0.00      0.00      0.00        24
+     Apple Golden 2       0.00      0.00      0.00        25
+     Apple Golden 3       0.00      0.00      0.00        35
+ Apple Granny Smith       0.00      0.00      0.00        28
+    Apple Pink Lady       0.00      0.00      0.00        32
+        Apple Red 1       0.00      0.00      0.00        21
+        Apple Red 2       0.00      0.00      0.00        24
+        Apple Red 3       0.00      0.00      0.00        16
+Apple Red Delicious       0.00      0.00      0.00        32
+ Apple Red Yellow 1       0.00      0.00      0.00        24
+ Apple Red Yellow 2       0.00      0.00      0.00        34
+            Apricot       0.00      0.00      0.00        29
+            Avocado       0.00      0.00      0.00        15
+       Avocado ripe       0.00      0.00      0.00        22
+             Banana       0.00      0.00      0.00        22
+ Banana Lady Finger       0.00      0.00      0.00        25
+         Banana Red       0.00      0.00      0.00        24
+           Beetroot       0.00      0.00      0.00        22
+          Blueberry       0.00      0.00      0.00        18
+       Cactus fruit       0.00      0.00      0.00        28
+       Cantaloupe 1       0.00      0.00      0.00        25
+       Cantaloupe 2       0.00      0.00      0.00        22
+          Carambula       0.00      0.00      0.00        26
+        Cauliflower       0.00      0.00      0.00        30
+           Cherry 1       0.00      0.00      0.00        21
+           Cherry 2       0.00      0.00      0.00        36
+     Cherry Rainier       0.00      0.00      0.00        35
+   Cherry Wax Black       0.00      0.00      0.00        17
+     Cherry Wax Red       0.00      0.00      0.00        27
+  Cherry Wax Yellow       0.00      0.00      0.00        28
+           Chestnut       0.00      0.00      0.00        17
+         Clementine       0.00      0.00      0.00        25
+              Cocos       0.00      0.00      0.00        28
+               Corn       0.00      0.00      0.00        20
+          Corn Husk       0.00      0.00      0.00        22
+      Cucumber Ripe       0.00      0.00      0.00        20
+    Cucumber Ripe 2       0.00      0.00      0.00        14
+              Dates       0.00      0.00      0.00        18
+           Eggplant       0.00      0.00      0.00        20
+                Fig       0.00      0.00      0.00        34
+        Ginger Root       0.00      0.00      0.00        19
+         Granadilla       0.00      0.00      0.00        21
+         Grape Blue       0.01      1.00      0.03        47
+         Grape Pink       0.00      0.00      0.00        23
+        Grape White       0.00      0.00      0.00        25
+      Grape White 2       0.00      0.00      0.00        20
+      Grape White 3       0.00      0.00      0.00        26
+      Grape White 4       0.00      0.00      0.00        25
+    Grapefruit Pink       0.00      0.00      0.00        28
+   Grapefruit White       0.00      0.00      0.00        29
+              Guava       0.00      0.00      0.00        25
+           Hazelnut       0.00      0.00      0.00        23
+        Huckleberry       0.00      0.00      0.00        30
+               Kaki       0.00      0.00      0.00        19
+               Kiwi       0.00      0.00      0.00        30
+           Kohlrabi       0.00      0.00      0.00        32
+           Kumquats       0.00      0.00      0.00        27
+              Lemon       0.00      0.00      0.00        23
+        Lemon Meyer       0.00      0.00      0.00        28
+              Limes       0.00      0.00      0.00        21
+             Lychee       0.00      0.00      0.00        18
+          Mandarine       0.00      0.00      0.00        23
+              Mango       0.00      0.00      0.00        30
+          Mango Red       0.00      0.00      0.00        21
+          Mangostan       0.00      0.00      0.00         6
+           Maracuja       0.00      0.00      0.00        18
+ Melon Piel de Sapo       0.00      0.00      0.00        41
+           Mulberry       0.00      0.00      0.00        31
+          Nectarine       0.00      0.00      0.00        24
+     Nectarine Flat       0.00      0.00      0.00        34
+         Nut Forest       0.00      0.00      0.00        33
+          Nut Pecan       0.00      0.00      0.00        29
+          Onion Red       0.00      0.00      0.00        21
+   Onion Red Peeled       0.00      0.00      0.00        25
+        Onion White       0.00      0.00      0.00        20
+             Orange       0.00      0.00      0.00        18
+             Papaya       0.00      0.00      0.00        20
+      Passion Fruit       0.00      0.00      0.00        32
+              Peach       0.00      0.00      0.00        28
+            Peach 2       0.00      0.00      0.00        37
+         Peach Flat       0.00      0.00      0.00        26
+               Pear       0.00      0.00      0.00        23
+             Pear 2       0.00      0.00      0.00        40
+         Pear Abate       0.00      0.00      0.00        20
+       Pear Forelle       0.00      0.00      0.00        35
+        Pear Kaiser       0.00      0.00      0.00        14
+       Pear Monster       0.00      0.00      0.00        27
+           Pear Red       0.00      0.00      0.00        32
+         Pear Stone       0.00      0.00      0.00        30
+      Pear Williams       0.00      0.00      0.00        17
+             Pepino       0.00      0.00      0.00        27
+       Pepper Green       0.00      0.00      0.00        21
+      Pepper Orange       0.00      0.00      0.00        41
+         Pepper Red       0.00      0.00      0.00        30
+      Pepper Yellow       0.00      0.00      0.00        38
+           Physalis       0.00      0.00      0.00        15
+ Physalis with Husk       0.00      0.00      0.00        24
+          Pineapple       0.00      0.00      0.00        29
+     Pineapple Mini       0.00      0.00      0.00        15
+       Pitahaya Red       0.00      0.00      0.00        30
+               Plum       0.00      0.00      0.00        15
+             Plum 2       0.00      0.00      0.00        30
+             Plum 3       0.00      0.00      0.00        53
+        Pomegranate       0.00      0.00      0.00        18
+     Pomelo Sweetie       0.00      0.00      0.00        23
+         Potato Red       0.00      0.00      0.00        22
+  Potato Red Washed       0.00      0.00      0.00        23
+       Potato Sweet       0.00      0.00      0.00        15
+       Potato White       0.00      0.00      0.00        24
+             Quince       0.00      0.00      0.00        24
+           Rambutan       0.00      0.00      0.00        27
+          Raspberry       0.00      0.00      0.00        25
+         Redcurrant       0.00      0.00      0.00        26
+              Salak       0.00      0.00      0.00        20
+         Strawberry       0.00      0.00      0.00        35
+   Strawberry Wedge       0.00      0.00      0.00        49
+          Tamarillo       0.00      0.00      0.00        20
+            Tangelo       0.00      0.00      0.00        22
+           Tomato 1       0.00      0.00      0.00        46
+           Tomato 2       0.00      0.00      0.00        39
+           Tomato 3       0.00      0.00      0.00        42
+           Tomato 4       0.00      0.00      0.00        23
+  Tomato Cherry Red       0.00      0.00      0.00        24
+       Tomato Heart       0.00      0.00      0.00        35
+      Tomato Maroon       0.00      0.00      0.00        11
+      Tomato Yellow       0.00      0.00      0.00        28
+ Tomato not Ripened       0.00      0.00      0.00        23
+             Walnut       0.00      0.00      0.00        42
+         Watermelon       0.00      0.00      0.00        29
+
+           accuracy                           0.01      3403
+          macro avg       0.00      0.01      0.00      3403
+       weighted avg       0.00      0.01      0.00      3403
