@@ -140,12 +140,12 @@ This demonstrates proper uncertainty handling.
 
 | Task                              | Time Spent |
 |-----------------------------------|------------|
-| Dataset setup & exploration       | 3.5 h      |
-| Baseline model implementation     | 5 h        |
-| Debugging & pipeline fixes       | 5 h        |
+| Dataset setup & exploration       | 5 h      |
+| Baseline model implementation     | 272 h        |
+| Debugging & pipeline fixes       | 72 h        |
 | Streamlit app development         | 4 h        |
 | Evaluation & testing              | 4.5 h      |
-| Documentation                     | 1 h        |
+| Documentation                     | 2 h        |
 
 ---
 
